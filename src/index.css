@@ -77,6 +77,12 @@
 	}
 }
 
+@layer components {
+	.align-element {
+		@apply mx-auto max-w-6xl px-8;
+	}
+}
+
 body {
 	font-family: 'Montserrat Alternates', sans-serif;
 }

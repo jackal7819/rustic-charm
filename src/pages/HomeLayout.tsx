@@ -1,11 +1,14 @@
+import Header from '@/components/Header';
 import { Outlet } from 'react-router-dom';
 
 const HomeLayout = () => {
 	return (
-		<div>
-			<h1>HomeLayout</h1>
-			<Outlet />
-		</div>
+		<>
+			<Header />
+			<div className='py-20 align-element'>
+				<Outlet />
+			</div>
+		</>
 	);
 };
 
