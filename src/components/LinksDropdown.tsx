@@ -5,7 +5,6 @@ import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
-	DropdownMenuLabel,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
@@ -21,27 +20,26 @@ const LinksDropdown = () => {
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent
-				className='w-32 p-2 lg:hidden'
+				className='p-2 w-52 lg:hidden'
 				align='start'
 				sideOffset={25}
 			>
-				<DropdownMenuLabel className='text-base font-normal cursor-default'>
-					Menu
-				</DropdownMenuLabel>
-				<DropdownMenuSeparator />
 				{links.map((link) => (
+					<>
 					<DropdownMenuItem key={link.label}>
 						<NavLink
 							to={link.href}
 							className={({ isActive }) => {
-								return `capitalize w-full ${
+								return `capitalize text-base font-semibold tracking-wide duration-500 w-full text-center ${
 									isActive ? 'text-primary' : ''
 								}`;
 							}}
 						>
-							<span className='capitalize'>{link.label}</span>
+							{link.label}
 						</NavLink>
 					</DropdownMenuItem>
+					<DropdownMenuSeparator />
+					</>
 				))}
 			</DropdownMenuContent>
 		</DropdownMenu>
