@@ -9,7 +9,7 @@ const NavLinks = () => {
 					key={link.label}
 					to={link.href}
 					className={({ isActive }) => {
-						return `capitalize font-semibold tracking-wide duration-500 ${
+						return `capitalize font-semibold tracking-wide duration-500 hover:text-primary ${
 							isActive ? 'text-primary' : ''
 						}`;
 					}}
