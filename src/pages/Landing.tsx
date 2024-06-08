@@ -1,8 +1,12 @@
+import FeaturedProducts from '@/components/FeaturedProducts';
+import Hero from '@/components/Hero';
+
 const Landing = () => {
 	return (
-		<div>
-			<h1>Landing</h1>
-		</div>
+		<>
+			<Hero />
+			<FeaturedProducts />
+		</>
 	);
 };
 
