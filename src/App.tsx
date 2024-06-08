@@ -4,7 +4,7 @@ import About from './pages/About';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Error from './pages/Error';
-import ErrorElement from './components/ErrorElement'
+import ErrorElement from './components/ErrorElement';
 import HomeLayout from './pages/HomeLayout';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
@@ -12,6 +12,7 @@ import Orders from './pages/Orders';
 import Products from './pages/Products';
 import Register from './pages/Register';
 import SingleProduct from './pages/SingleProduct';
+import loadLandingData from './utils/loadLandingData';
 
 const router = createBrowserRouter([
 	{
@@ -22,37 +23,38 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: <Landing />,
-        errorElement: <ErrorElement />,
+				errorElement: <ErrorElement />,
+				loader: loadLandingData,
 			},
 			{
 				path: '/cart',
 				element: <Cart />,
-        errorElement: <ErrorElement />,
+				errorElement: <ErrorElement />,
 			},
 			{
 				path: '/products',
 				element: <Products />,
-        errorElement: <ErrorElement />,
+				errorElement: <ErrorElement />,
 			},
 			{
 				path: '/products/:id',
 				element: <SingleProduct />,
-        errorElement: <ErrorElement />,
+				errorElement: <ErrorElement />,
 			},
 			{
 				path: '/about',
 				element: <About />,
-        errorElement: <ErrorElement />,
+				errorElement: <ErrorElement />,
 			},
 			{
 				path: '/checkout',
 				element: <Checkout />,
-        errorElement: <ErrorElement />,
+				errorElement: <ErrorElement />,
 			},
 			{
 				path: '/orders',
 				element: <Orders />,
-        errorElement: <ErrorElement />,
+				errorElement: <ErrorElement />,
 			},
 		],
 	},
