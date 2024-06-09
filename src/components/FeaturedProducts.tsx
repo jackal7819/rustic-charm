@@ -1,8 +1,12 @@
+import ProductsGrid from './ProductsGrid';
+import SectionTitle from './SectionTitle';
+
 const FeaturedProducts = () => {
 	return (
-		<div>
-			<h1>Featured Products</h1>
-		</div>
+		<section className='pt-20'>
+			<SectionTitle text='Featured Products' />
+			<ProductsGrid />
+		</section>
 	);
 };
 
