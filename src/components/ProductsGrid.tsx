@@ -28,7 +28,7 @@ const ProductsGrid: React.FC = () => {
 									<h2 className='text-xl font-semibold capitalize'>
 										{title}
 									</h2>
-									<p className='mt-2 font-light text-primary'>
+									<p className='mt-2 font-bold text-primary'>
 										{dollarsAmount}
 									</p>
 								</div>
