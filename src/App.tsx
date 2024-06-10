@@ -13,6 +13,7 @@ import Products from './pages/Products';
 import Register from './pages/Register';
 import SingleProduct from './pages/SingleProduct';
 import loadLandingData from './utils/loadLandingData';
+import loadProductsData from './utils/loadProductsData';
 
 const router = createBrowserRouter([
 	{
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
 				path: '/products',
 				element: <Products />,
 				errorElement: <ErrorElement />,
+				loader: loadProductsData,
 			},
 			{
 				path: '/products/:id',
