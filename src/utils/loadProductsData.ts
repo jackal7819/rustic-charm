@@ -5,9 +5,9 @@ import { ProductsResponse } from './types';
 
 const URL = '/products';
 
-const loadLandingData: LoaderFunction = async (): Promise<ProductsResponse> => {
+const loadProductsData: LoaderFunction = async (): Promise<ProductsResponse> => {
 	const response = await customFetch<ProductsResponse>(URL);
 	return { ...response.data };
 };
 
-export default loadLandingData;
+export default loadProductsData;

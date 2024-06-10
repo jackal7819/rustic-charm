@@ -1,8 +1,14 @@
+import Filters from '@/components/Filters';
+import PaginationContainer from '@/components/PaginationContainer';
+import ProductsContainer from '@/components/ProductsContainer';
+
 const Products = () => {
 	return (
-		<div>
-			<h1>Products</h1>
-		</div>
+		<>
+			<Filters />
+			<ProductsContainer />
+			<PaginationContainer />
+		</>
 	);
 };
 

@@ -1,7 +1,9 @@
+import ProductsList from './ProductsList';
+
 const ProductsContainer = () => {
 	return (
 		<div>
-			<h1>Products Container</h1>
+			<ProductsList />
 		</div>
 	);
 };
