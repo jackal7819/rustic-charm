@@ -13,7 +13,7 @@ import Products from './pages/Products';
 import Register from './pages/Register';
 import SingleProduct from './pages/SingleProduct';
 import loadLandingData from './utils/loadLandingData';
-import loadProductsData from './utils/loadProductsData';
+import loadProductsData from './utils/loadProductsData'
 
 const router = createBrowserRouter([
 	{
