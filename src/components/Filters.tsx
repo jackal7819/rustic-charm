@@ -3,7 +3,7 @@ import { Label } from './ui/label';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
 
-const Filters = () => {
+const Filters: React.FC = () => {
 	return (
 		<Form className='grid items-center px-8 py-4 border rounded-md gap-x-4 gap-y-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
 			<div className='mb-2'>
