@@ -3,6 +3,7 @@ import { Button } from './ui/button';
 import { ProductsResponseWithParams } from '@/utils/types';
 import FormInput from './FormInput';
 import FormSelect from './FormSelect';
+import FormRange from './FormRange';
 
 const Filters: React.FC = () => {
 	const { meta, params } = useLoaderData() as ProductsResponseWithParams;
@@ -38,6 +39,8 @@ const Filters: React.FC = () => {
 				defaultValue={order}
 				options={['a-z', 'z-a', 'high', 'low']}
 			/>
+			{/* PRICE */}
+			<FormRange label='price' name='price' defaultValue={price} />
 			<Button type='submit' size='default' className='self-end mb-2'>
 				Search
 			</Button>
