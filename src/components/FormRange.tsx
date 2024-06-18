@@ -23,6 +23,7 @@ const FormRange: React.FC<FormRangeProps> = ({ name, label, defaultValue }) => {
 			</Label>
 			<Slider
 					id={name}
+					name={name}
 					max={maxPrice}
 					step={step}
 					value={[selectedPrice]}
