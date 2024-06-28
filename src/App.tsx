@@ -13,7 +13,8 @@ import Products from './pages/Products';
 import Register from './pages/Register';
 import SingleProduct from './pages/SingleProduct';
 import loadLandingData from './utils/loadLandingData';
-import loadProductsData from './utils/loadProductsData'
+import loadProductsData from './utils/loadProductsData';
+import loadSingleProductData from './utils/loadSingleProductData';
 
 const router = createBrowserRouter([
 	{
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
 				path: '/products/:id',
 				element: <SingleProduct />,
 				errorElement: <ErrorElement />,
+				loader: loadSingleProductData,
 			},
 			{
 				path: '/about',
