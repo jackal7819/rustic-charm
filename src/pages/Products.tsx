@@ -2,7 +2,7 @@ import Filters from '@/components/Filters';
 import PaginationContainer from '@/components/PaginationContainer';
 import ProductsContainer from '@/components/ProductsContainer';
 
-const Products = () => {
+const Products: React.FC = () => {
 	return (
 		<>
 			<Filters />

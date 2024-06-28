@@ -1,6 +1,6 @@
 import { Skeleton } from './ui/skeleton';
 
-const Loading = () => {
+const Loading: React.FC = () => {
 	return (
 		<div className='grid gap-4 pt-12 md:grid-cols-2 lg:grid-cols-3'>
 			{Array.from({ length: 3 }).map((_, index) => (

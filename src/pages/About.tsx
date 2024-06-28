@@ -1,4 +1,4 @@
-const About = () => {
+const About: React.FC = () => {
 	return (
 		<section>
 			<h1 className='flex flex-wrap items-center justify-center gap-2 text-4xl font-bold leading-none tracking-wide sm:gap-x-6 sm:text-6xl'>

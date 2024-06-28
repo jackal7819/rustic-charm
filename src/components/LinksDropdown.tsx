@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { links } from '@/utils/links';
 
-const LinksDropdown = () => {
+const LinksDropdown: React.FC = () => {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild className='lg:hidden'>

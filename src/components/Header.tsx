@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import { Button } from './ui/button';
 
-const Header = () => {
+const Header: React.FC = () => {
 	const navigate = useNavigate();
 	const [user, setUser] = useState<{ username: string } | null>({
 		username: 'Homer Simpson',

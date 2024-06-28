@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import HeroCarousel from './HeroCarousel';
 import { Button } from './ui/button';
 
-const Hero = () => {
+const Hero: React.FC = () => {
 	return (
 		<section className='grid items-center grid-cols-1 gap-24 lg:grid-cols-2'>
 			<div>

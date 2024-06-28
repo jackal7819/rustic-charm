@@ -11,7 +11,7 @@ import {
 	PaginationPrevious,
 } from './ui/pagination';
 
-const PaginationContainer = () => {
+const PaginationContainer: React.FC = () => {
 	const { meta } = useLoaderData() as ProductsResponseWithParams;
 	const { pageCount, page } = meta.pagination;
 

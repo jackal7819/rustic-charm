@@ -3,7 +3,7 @@ import Loading from '@/components/Loading';
 import Navbar from '@/components/Navbar';
 import { Outlet, useNavigation } from 'react-router-dom';
 
-const HomeLayout = () => {
+const HomeLayout: React.FC = () => {
 	const navigation = useNavigation();
 	const isLoading = navigation.state === 'loading';
 

@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { useAppDispatch } from '@/hooks';
 
-const ModeToggle = () => {
+const ModeToggle: React.FC = () => {
 	const dispatch = useAppDispatch();
 
 	return (

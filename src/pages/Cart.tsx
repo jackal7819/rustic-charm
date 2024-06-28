@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
-const Cart = () => {
+const Cart: React.FC = () => {
 	return (
 		<div>
 			<h1>Cart Page</h1>

@@ -13,7 +13,7 @@ import {
 
 const carouselImages = [hero1, hero2, hero3, hero4];
 
-const HeroCarousel = () => {
+const HeroCarousel: React.FC = () => {
 	return (
 		<div className='hidden pr-9 lg:block'>
 			<Carousel>

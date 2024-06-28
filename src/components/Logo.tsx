@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Logo = () => {
+const Logo: React.FC = () => {
 	return (
 		<Link to='/' className='hidden lg:flex'>
 			<div className='flex items-center justify-center p-1 text-xl font-semibold duration-500 rounded-md bg-primary hover:opacity-80'>

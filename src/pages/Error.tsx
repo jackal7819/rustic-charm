@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Link, isRouteErrorResponse, useRouteError } from 'react-router-dom';
 
-const Error = () => {
+const Error: React.FC = () => {
 	const error = useRouteError();
 	if (isRouteErrorResponse(error) && error.status === 404) {
 		return (

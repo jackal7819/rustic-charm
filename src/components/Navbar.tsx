@@ -4,7 +4,7 @@ import Logo from './Logo'
 import ModeToggle from './ModeToggle'
 import NavLinks from './NavLinks'
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
 	return (
 		<nav className='py-4 bg-muted'>
 			<div className='flex items-center justify-between align-element'>

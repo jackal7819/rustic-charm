@@ -4,7 +4,7 @@ import { formatAsDollars } from '@/utils/formatAsDollars';
 
 import { Card, CardContent } from './ui/card';
 
-const ProductsList = () => {
+const ProductsList: React.FC = () => {
 	const { data: products } = useLoaderData() as ProductsResponse;
 
 	return (

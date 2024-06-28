@@ -1,7 +1,7 @@
 import { links } from '@/utils/links';
 import { NavLink } from 'react-router-dom';
 
-const NavLinks = () => {
+const NavLinks: React.FC = () => {
 	return (
 		<div className='items-center justify-center hidden lg:flex gap-x-4'>
 			{links.map((link) => (
