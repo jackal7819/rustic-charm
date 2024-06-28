@@ -52,3 +52,8 @@ export type SingleProductResponse = {
 	data: Product;
 	meta: object;
 };
+
+export enum Mode {
+	SingleProduct = 'SingleProduct',
+	CartItem = 'CartItem',
+}

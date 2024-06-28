@@ -1,4 +1,4 @@
-import { SingleProductResponse } from '@/utils/types';
+import { Mode, SingleProductResponse } from '@/utils/types';
 import { formatAsDollars } from '@/utils/formatAsDollars';
 import { Link, useLoaderData } from 'react-router-dom';
 import { useState } from 'react';
@@ -49,7 +49,11 @@ const SingleProduct: React.FC = () => {
 						productColor={productColor}
 						setProductColor={setProductColor}
 					/>
-					<SelectProductAmount />
+					<SelectProductAmount
+						mode={Mode.SingleProduct}
+						amount={amount}
+						setAmount={setAmount}
+					/>
 					<Button size='lg' className='mt-10' onClick={addToCart}>
 						Add to bag
 					</Button>
