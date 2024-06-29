@@ -59,7 +59,7 @@ export enum Mode {
 }
 
 export type CartItem = {
-	cardId: string;
+	cartID: string;
 	productID: number;
 	image: string;
 	title: string;
