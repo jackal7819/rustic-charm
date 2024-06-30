@@ -53,7 +53,22 @@ const cartSlice = createSlice({
 			cartSlice.caseReducers.calculateTotals(state);
 			toast({ description: 'Item removed from the cart' });
 		},
-		editItem: () => {},
+		editItem: (
+			state,
+			action: PayloadAction<{ cartID: string; amount: number }>
+		) => {
+			const { cartID, amount } = action.payload;
+			const cartItem = state.cartItems.find((i) => i.cartID === cartID);
+			if (!cartItem) {
+				return;
+			}
+			state.numItemsInCart += amount - cartItem.amount;
+			state.cartTotal +=
+				Number(cartItem.price) * (amount - cartItem.amount);
+			cartItem.amount = amount;
+			cartSlice.caseReducers.calculateTotals(state);
+			toast({ description: 'Amount updated' });
+		},
 		calculateTotals: (state) => {
 			state.tax = 0.1 * state.cartTotal;
 			state.orderTotal = state.cartTotal + state.shipping + state.tax;
