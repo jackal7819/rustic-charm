@@ -1,4 +1,4 @@
-import { Mode, SingleProductResponse } from '@/utils/types';
+import { CartItem, Mode, SingleProductResponse } from '@/utils/types';
 import { formatAsDollars } from '@/utils/formatAsDollars';
 import { Link, useLoaderData } from 'react-router-dom';
 import { useState } from 'react';
@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import SelectProductColor from '@/components/SelectProductColor';
 import SelectProductAmount from '@/components/SelectProductAmount';
+import { useAppDispatch } from '@/hooks';
+import { addItem } from '@/features/cartSlice';
 
 const SingleProduct: React.FC = () => {
 	const { data: product } = useLoaderData() as SingleProductResponse;
@@ -14,9 +16,21 @@ const SingleProduct: React.FC = () => {
 	const dollarsAmount = formatAsDollars(price);
 	const [productColor, setProductColor] = useState(colors[0]);
 	const [amount, setAmount] = useState(1);
+	const dispatch = useAppDispatch();
+
+	const cartProduct: CartItem = {
+		cartID: product.id + productColor,
+		productID: product.id,
+		image,
+		title,
+		price,
+		amount,
+		productColor,
+		company,
+	};
 
 	const addToCart = () => {
-		console.log('add to cart');
+		dispatch(addItem(cartProduct));
 	};
 
 	return (
