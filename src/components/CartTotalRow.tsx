@@ -15,7 +15,7 @@ const CartTotalRow: React.FC<CartTotalRowProps> = ({
 }) => {
 	return (
 		<>
-			<p className='flex justify-between text-sm'>
+			<p className='flex justify-between text-lg'>
 				<span>{label}</span>
 				<span>{formatAsDollars(amount)}</span>
 			</p>
