@@ -6,7 +6,7 @@ const defaultState: CartState = {
 	cartItems: [],
 	numItemsInCart: 0,
 	cartTotal: 0,
-	shipping: 0,
+	shipping: 500,
 	tax: 0,
 	orderTotal: 0,
 };

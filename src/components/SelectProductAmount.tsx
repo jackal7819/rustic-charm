@@ -1,6 +1,7 @@
 import { Mode } from '@/utils/types';
-import { Select, SelectContent, SelectItem, SelectTrigger } from './ui/select';
 import { SelectValue } from '@radix-ui/react-select';
+
+import { Select, SelectContent, SelectItem, SelectTrigger } from './ui/select';
 
 type SelectProductAmountProps = {
 	mode: Mode.SingleProduct;
@@ -21,7 +22,7 @@ const SelectProductAmount: React.FC<
 
 	return (
 		<>
-			<h4 className='my-3 font-medium'>Amount : </h4>
+			<h4 className='mb-2 font-medium'>Amount : </h4>
 			<Select
 				defaultValue={amount.toString()}
 				onValueChange={(value) => setAmount(Number(value))}
