@@ -13,7 +13,7 @@ const Register: React.FC = () => {
 					</CardTitle>
 				</CardHeader>
 				<CardContent>
-					<Form>
+					<Form method='post' action='/register'>
 						<FormInput
 							type='text'
 							defaultValue='test'

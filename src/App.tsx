@@ -15,6 +15,7 @@ import SingleProduct from './pages/SingleProduct';
 import loadLandingData from './utils/loadLandingData';
 import loadProductsData from './utils/loadProductsData';
 import loadSingleProductData from './utils/loadSingleProductData';
+import registerUser from './utils/registerUser';
 
 const router = createBrowserRouter([
 	{
@@ -71,6 +72,7 @@ const router = createBrowserRouter([
 		path: '/register',
 		element: <Register />,
 		errorElement: <Error />,
+		action: registerUser,
 	},
 ]);
 
