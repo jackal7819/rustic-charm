@@ -1,4 +1,5 @@
 import FormInput from '@/components/FormInput';
+import SubmitBtn from '@/components/SubmitBtn';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, Link } from 'react-router-dom';
@@ -29,13 +30,7 @@ const Register: React.FC = () => {
 							defaultValue='secret'
 							name='password'
 						/>
-						<Button
-							type='submit'
-							variant='default'
-							className='w-full mt-4 capitalize'
-						>
-							register
-						</Button>
+						<SubmitBtn text='Register' className='w-full mt-4' />
 						<p className='mt-4 text-center'>
 							Already a member?{' '}
 							<Button type='button' variant='link'>
