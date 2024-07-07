@@ -17,17 +17,14 @@ const Register: React.FC = () => {
 					<Form method='post' action='/register'>
 						<FormInput
 							type='text'
-							defaultValue='test'
 							name='username'
 						/>
 						<FormInput
 							type='email'
-							defaultValue='test@test.com'
 							name='email'
 						/>
 						<FormInput
 							type='password'
-							defaultValue='secret'
 							name='password'
 						/>
 						<SubmitBtn text='Register' className='w-full mt-4' />
