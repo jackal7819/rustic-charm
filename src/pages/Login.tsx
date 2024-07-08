@@ -42,7 +42,7 @@ const Login: React.FC = () => {
 				</CardHeader>
 				<CardContent>
 					<Form method='post'>
-						<FormInput type='email' name='email' />
+						<FormInput type='email' label='email' name='identifier' />
 						<FormInput type='password' name='password' />
 						<SubmitBtn text='Login' className='w-full mt-4' />
 						<Button

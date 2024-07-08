@@ -4,7 +4,7 @@ import { toast } from '@/components/ui/use-toast';
 
 import customFetch from './customFetch';
 
-const registerUser: ActionFunction = async ({
+const registerUserAction: ActionFunction = async ({
 	request,
 }): Promise<Response | null> => {
 	const formData = await request.formData();
@@ -23,4 +23,4 @@ const registerUser: ActionFunction = async ({
 	}
 };
 
-export default registerUser;
+export default registerUserAction;

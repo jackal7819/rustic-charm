@@ -15,7 +15,9 @@ import SingleProduct from './pages/SingleProduct';
 import loadLandingData from './utils/loadLandingData';
 import loadProductsData from './utils/loadProductsData';
 import loadSingleProductData from './utils/loadSingleProductData';
-import registerUser from './utils/registerUser';
+import registerUserAction from './utils/registerUserAction';
+import { loginUserAction } from './utils/loginUserAction'
+import { store } from './store'
 
 const router = createBrowserRouter([
 	{
@@ -67,12 +69,13 @@ const router = createBrowserRouter([
 		path: '/login',
 		element: <Login />,
 		errorElement: <Error />,
+		action: loginUserAction(store),
 	},
 	{
 		path: '/register',
 		element: <Register />,
 		errorElement: <Error />,
-		action: registerUser,
+		action: registerUserAction,
 	},
 ]);
 
