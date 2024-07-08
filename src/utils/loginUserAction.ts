@@ -1,12 +1,12 @@
 import { ActionFunction, redirect } from 'react-router-dom';
-import { AxiosError, AxiosResponse } from 'axios';
+import { AxiosResponse } from 'axios';
 import { ReduxStore } from '@/store';
 import { loginUser } from '@/features/userSlice';
 import { toast } from '@/components/ui/use-toast';
 
 import customFetch from './customFetch';
 
-export const loginUserAction =
+const loginUserAction =
 	(store: ReduxStore): ActionFunction =>
 	async ({ request }): Promise<Response | null> => {
 		const formData = await request.formData();
@@ -22,12 +22,10 @@ export const loginUserAction =
 			store.dispatch(loginUser({ username, jwt }));
 			return redirect('/');
 		} catch (error) {
-			const errorMessage =
-				error instanceof AxiosError
-					? error.response?.data.error.message
-					: 'Login failed';
-			console.log(errorMessage);
+			console.log(error);
 			toast({ description: 'Login Failed' });
 			return null;
 		}
 	};
+
+export default loginUserAction;

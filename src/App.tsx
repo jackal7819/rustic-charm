@@ -12,13 +12,13 @@ import Orders from './pages/Orders';
 import Products from './pages/Products';
 import Register from './pages/Register';
 import SingleProduct from './pages/SingleProduct';
-import loadCheckoutData from './utils/loadCheckoutData'
+import loadCheckoutData from './utils/loadCheckoutData';
 import loadLandingData from './utils/loadLandingData';
 import loadProductsData from './utils/loadProductsData';
 import loadSingleProductData from './utils/loadSingleProductData';
+import loginUserAction from './utils/loginUserAction';
 import registerUserAction from './utils/registerUserAction';
-import { loginUserAction } from './utils/loginUserAction'
-import { store } from './store'
+import { store } from './store';
 
 const router = createBrowserRouter([
 	{
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
 				path: '/checkout',
 				element: <Checkout />,
 				errorElement: <ErrorElement />,
-				loader: loadCheckoutData,
+				loader: loadCheckoutData(store),
 			},
 			{
 				path: '/orders',
