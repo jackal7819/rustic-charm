@@ -12,6 +12,7 @@ import Orders from './pages/Orders';
 import Products from './pages/Products';
 import Register from './pages/Register';
 import SingleProduct from './pages/SingleProduct';
+import checkoutAction from './utils/checkoutAction';
 import loadCheckoutData from './utils/loadCheckoutData';
 import loadLandingData from './utils/loadLandingData';
 import loadProductsData from './utils/loadProductsData';
@@ -59,6 +60,7 @@ const router = createBrowserRouter([
 				element: <Checkout />,
 				errorElement: <ErrorElement />,
 				loader: loadCheckoutData(store),
+				action: checkoutAction(store),
 			},
 			{
 				path: '/orders',
