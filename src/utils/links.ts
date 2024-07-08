@@ -9,23 +9,23 @@ export const links: Link[] = [
 		label: 'Home',
 	},
 	{
-		href: '/about',
+		href: 'about',
 		label: 'about',
 	},
 	{
-		href: '/products',
+		href: 'products',
 		label: 'products',
 	},
 	{
-		href: '/cart',
+		href: 'cart',
 		label: 'cart',
 	},
 	{
-		href: '/checkout',
+		href: 'checkout',
 		label: 'checkout',
 	},
 	{
-		href: '/orders',
+		href: 'orders',
 		label: 'orders',
 	},
 ];

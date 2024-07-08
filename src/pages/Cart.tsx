@@ -6,7 +6,7 @@ import CartItemsList from '@/components/CartItemsList';
 import CartTotals from '@/components/CartTotals';
 
 const Cart: React.FC = () => {
-	const user = null;
+	const user = useAppSelector((state) => state.userState.user);
 
 	const numItemsInCart = useAppSelector(
 		(state) => state.cartState.numItemsInCart
@@ -25,15 +25,13 @@ const Cart: React.FC = () => {
 				</div>
 				<div className='lg:col-span-4 lg:pl-4'>
 					<CartTotals />
-					{user ? (
-						<Button asChild className='w-full mt-8'>
+					<Button asChild className='w-full mt-8'>
+						{user ? (
 							<Link to='/checkout'>Proceed to checkout</Link>
-						</Button>
-					) : (
-						<Button asChild className='w-full mt-8'>
+						) : (
 							<Link to='/login'>Please login</Link>
-						</Button>
-					)}
+						)}
+					</Button>
 				</div>
 			</div>
 		</>
