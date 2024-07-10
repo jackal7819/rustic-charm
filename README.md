@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+**Rustic Charm**
+Rustic Charm is an online furniture store that offers a curated selection of rustic and charming furniture pieces. The store focuses on providing high-quality, aesthetically pleasing furniture that fits various home styles.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Description:**
+Rustic Charm aims to bring a touch of rustic elegance to homes through its diverse collection of furniture. The store features pieces made from natural materials, emphasizing sustainability and craftsmanship. Customers can browse through different categories, including living room, bedroom, dining, and outdoor furniture. Each piece is selected to ensure it meets the standards of durability, functionality, and style.
 
-Currently, two official plugins are available:
+**Technologies Used:**
+- **React**: For building the user interface. [React](https://reactjs.org/)
+- **TypeScript**: To enhance code quality and maintainability. [TypeScript](https://www.typescriptlang.org/)
+- **Vite**: For fast and efficient development and build processes. [Vite](https://vitejs.dev/)
+- **ESLint**: To maintain code consistency and quality. [ESLint](https://eslint.org/)
+- **Tailwind CSS**: For rapid and flexible styling. [Tailwind CSS](https://tailwindcss.com/)
+- **Axios**: For making HTTP requests. [Axios](https://axios-http.com/)
+- **ShadCN**: For component library and styling. [ShadCN](https://shadcn.dev/)
+- **Lucide-react**: For iconography. [Lucide-react](https://lucide.dev/)
+- **Redux Toolkit**: For state management. [Redux Toolkit](https://redux-toolkit.js.org/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+**Conclusion:**
+Rustic Charm stands out as a premier destination for those looking to add a rustic touch to their homes. The store's commitment to quality, sustainability, and customer satisfaction makes it a reliable choice for furniture shopping.
