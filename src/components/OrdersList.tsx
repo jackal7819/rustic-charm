@@ -18,18 +18,28 @@ const OrdersList: React.FC = () => {
 			<h4 className='mb-4 capitalize'>
 				total orders : {meta.pagination.total}
 			</h4>
-			<Table>
+			<Table className='overflow-x-auto'>
 				<TableCaption>A list of your recent orders</TableCaption>
 				<TableHeader>
-					<TableRow>
-						<TableHead>Name</TableHead>
-						<TableHead>Address</TableHead>
-						<TableHead className='w-24'>Products</TableHead>
-						<TableHead className='w-24 text-center'>Cost</TableHead>
-						<TableHead>Date</TableHead>
+					<TableRow className='text-center'>
+						<TableHead className='text-center min-w-36'>
+							Name
+						</TableHead>
+						<TableHead className='text-center min-w-36'>
+							Address
+						</TableHead>
+						<TableHead className='w-24 text-center'>
+							Products
+						</TableHead>
+						<TableHead className='w-24 pr-8 text-center'>
+							Cost
+						</TableHead>
+						<TableHead className='text-center min-w-36'>
+							Date
+						</TableHead>
 					</TableRow>
 				</TableHeader>
-				<TableBody>
+				<TableBody className='text-center'>
 					{orders.map((order) => {
 						const {
 							name,
@@ -40,15 +50,19 @@ const OrdersList: React.FC = () => {
 						} = order.attributes;
 						return (
 							<TableRow key={order.id}>
-								<TableCell>{name}</TableCell>
-								<TableCell>{address}</TableCell>
-								<TableCell className='text-center'>
+								<TableCell className='min-w-36'>
+									{name}
+								</TableCell>
+								<TableCell className='min-w-36'>
+									{address}
+								</TableCell>
+								<TableCell className='w-24'>
 									{numItemsInCart}
 								</TableCell>
-								<TableCell className='text-right'>
+								<TableCell className='w-24'>
 									{orderTotal}
 								</TableCell>
-								<TableCell>
+								<TableCell className='min-w-36'>
 									{new Date(createdAt).toDateString()}
 								</TableCell>
 							</TableRow>
