@@ -7,7 +7,6 @@ const CartButton: React.FC = () => {
 	const numItemsInCart = useAppSelector(
 		(state) => state.cartState.numItemsInCart
 	);
-	console.log(numItemsInCart);
 
 	return (
 		<Button
